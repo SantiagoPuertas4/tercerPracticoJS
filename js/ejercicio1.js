@@ -27,18 +27,3 @@ function armarListado(meses) {
 }
 
 alert(armarListado(meses));
-
-// function obtenerListado() {
-//   let texto = "";
-
-//   for (i = 0; i < listaTareas.length - 1; i++) {
-//     texto += `${i + 1}. ${listaTareas[i + 1]} \n`;
-//   }
-
-//   return texto;
-// }
-
-// function listarTareas() {
-//   let texto = obtenerListado();
-//   alert(texto);
-// }
