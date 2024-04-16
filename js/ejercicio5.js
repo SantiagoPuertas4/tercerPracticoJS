@@ -43,7 +43,7 @@ function contieneMinus() {
 do {
   texto = prompt("Ingresa una cadena de texto");
 
-  if (texto === null || textoñ.trim() === "") {
+  if (texto === null || texto.trim() === "") {
     alert("No ingreso nada");
   } else {
     break;
