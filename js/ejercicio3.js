@@ -34,7 +34,7 @@ for (i = 0; i < 50; i++) {
   resultados[num] = resultados[num] + 1;
 }
 
-for (i = 0; i < 12; i++) {
+for (i = 1; i < 12; i++) {
   resultadosTexto += `Resultado ${i + 1} : ${resultados[i]} veces \n`;
 }
 
