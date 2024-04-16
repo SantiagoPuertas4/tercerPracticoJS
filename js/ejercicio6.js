@@ -14,7 +14,7 @@ function ingresoNum(msg) {
 
     if (num === null) {
       ("No ingreso nada");
-    } else if (isNaN(num) || num === "") {
+    } else if (isNaN(num) || num.trim() === "") {
       ("No ingreso un numero");
     } else {
       break;
