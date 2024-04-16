@@ -15,7 +15,7 @@ function ingreso() {
   do {
     ciudad = prompt("Ingresa el nombre de una ciudad");
 
-    if (ciudad === "") {
+    if (ciudad.trim() === "") {
       alert("Nombre vacio");
     } else {
       break;
