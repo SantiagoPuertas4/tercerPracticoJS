@@ -11,7 +11,7 @@ Sustituye el elemento que ocupa la segunda posición por la ciudad de 'Barcelona
 let ciudades = [];
 let ciudad = "";
 
-do {
+function ingreso() {
   do {
     ciudad = prompt("Ingresa el nombre de una ciudad");
 
@@ -21,6 +21,12 @@ do {
       break;
     }
   } while (true);
+
+  return ciudad;
+}
+
+do {
+  ciudad = prompt("Ingresa el nombre de una ciudad");
 
   if (ciudad !== null) {
     ciudades.push(ciudad);
