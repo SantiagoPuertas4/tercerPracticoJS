@@ -9,10 +9,52 @@ Sustituye el elemento que ocupa la segunda posición por la ciudad de 'Barcelona
  */
 
 let ciudades = [];
-let ciudad = [];
+let ciudad = "";
 
 do {
   do {
-    ciudad = prompt("Ingresa una ciudad");
+    ciudad = prompt("Ingresa el nombre de una ciudad");
+
+    if (ciudad === "") {
+      alert("Nombre vacio");
+    } else {
+      break;
+    }
   } while (true);
+
+  if (ciudad !== null) {
+    ciudades.push(ciudad);
+  }
 } while (ciudad !== null);
+
+document.write(`El arreglo tiene ${ciudades.length} ciudades </br>`);
+
+if (ciudades.length > 0) {
+  document.write(`Elemento primer posicion: ${ciudades[0]} </br>`);
+
+  if (ciudades.length > 2) {
+    document.write(`Elemento tercer posicion: ${ciudades[2]} </br>`);
+  } else {
+    document.write(`No existe tercera posicion </br>`);
+  }
+
+  document.write(
+    `Elemento ultima posicion: ${ciudades[ciudades.length - 1]}</br>`
+  );
+
+  ciudades.pop();
+  ciudades.push("París");
+
+  document.write(
+    `Elemento ultima posicion: ${ciudades[ciudades.length - 1]}</br>`
+  );
+
+  if (ciudades.length > 1) {
+    document.write(`Elemento segunda posicion: ${ciudades[1]}</br>`);
+    ciudades.slice(1, 1);
+    ciudades[1] = "Barcelona";
+    document.write(`Elemento segunda posicion: ${ciudades[1]}</br>`);
+  } else {
+    document.write(`No existe segunda posicion </br>`);
+  }
+}
