@@ -19,7 +19,7 @@ do {
 
   if (isNaN(entero)) {
     alert("No ingreso un numero");
-  } else if (entero === null) {
+  } else if (entero === null || entero === "") {
     alert("No ingreso nada");
   } else {
     break;

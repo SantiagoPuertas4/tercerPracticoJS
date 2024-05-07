@@ -4,61 +4,23 @@ A partir de la cadena que se le pasa, la función determina si esa cadena está 
 */
 
 let texto = "";
-let arrayLetras = [];
-let mayus = false;
-let minus = false;
-
-function contieneMayus() {
-  let res = false;
-
-  for (i = 0; i < arrayLetras.length; i++) {
-    if (arrayLetras[i] === arrayLetras[i].toUpperCase()) {
-      res = true;
-    }
-  }
-
-  if (res === true) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-function contieneMinus() {
-  let res = false;
-
-  for (i = 0; i < arrayLetras.length; i++) {
-    if (arrayLetras[i] === arrayLetras[i].toLowerCase()) {
-      res = true;
-    }
-  }
-
-  if (res === true) {
-    return true;
-  } else {
-    return false;
-  }
-}
 
 do {
   texto = prompt("Ingresa una cadena de texto");
 
   if (texto === null || texto.trim() === "") {
     alert("No ingreso nada");
+  } else if (!isNaN(texto)) {
+    alert("Ingreso solo numeros");
   } else {
     break;
   }
 } while (true);
 
-arrayLetras = Array.from(texto);
-
-mayus = contieneMayus();
-minus = contieneMinus();
-
-if (mayus === true && minus === true) {
-  alert("La cadena de texto contiene mayusculas y minusculas");
-} else if (mayus === true) {
+if (texto === texto.toUpperCase()) {
   alert("La cadena de texto contiene solo mayusculas");
-} else {
+} else if (texto === texto.toLowerCase()) {
   alert("La cadena de texto contiene solo minusculas");
+} else {
+  alert("La cadena de texto contiene mayusculas y minusculas");
 }
